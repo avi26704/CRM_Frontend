@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# CRM Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the CRM Frontend repository! This project serves as the user interface for a Customer Relationship Management (CRM) system, enabling businesses to manage customer interactions, sales pipelines, and marketing campaigns efficiently.
 
-## Available Scripts
+## Local Setup Instructions
 
-In the project directory, you can run:
+To run the CRM Frontend locally, follow these steps:
 
-### `npm start`
+1. **Clone the Repository**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   git clone https://github.com/avi26704/CRM_Frontend.git
+   cd CRM_Frontend
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install Dependencies**
 
-### `npm test`
+   Ensure you have [Node.js](https://nodejs.org/) installed. Then, run:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Start the Development Server**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   This will launch the application at [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Architecture Diagram
 
-### `npm run eject`
+Below is a high-level architecture diagram illustrating the CRM system's components:
+![alt text](<Screenshot 2025-09-15 185211.png>)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The CRM Frontend is built using modern web technologies to ensure a responsive and efficient user experience:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **React.js**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **React Router DOM**: Declarative routing for React applications.
+- **React Icons**: A library of popular icons for React applications.
+- **JSONWebToken (JWT)**: A library for securely handling authentication tokens.
+- **Recharts**: A charting library for creating interactive and customizable charts in React applications.
+- **Google OAuth**: Used for secure user authentication and login with Google accounts.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Summary of AI Tools and Other Technologies
 
-## Learn More
+Currently, the frontend does not integrate AI tools directly. However, the architecture is designed to support future AI enhancements such as:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Chatbots**: For AI-driven support.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Known Limitations
 
-### Code Splitting
+1. **Backend Dependency** – Requires a running backend API for full functionality.
+2. **Authentication and Security** – Basic token-based authentication (JWT); advanced features not fully implemented.
+3. **Data Validation** – Minimal client-side validation; backend ensures data integrity.
+4. **Error Handling** – Basic error handling for API failures or network issues.
+5. **Limited AI Integration** – AI features are planned but not yet implemented.
+6. **Performance with Large Data** – Not optimized for extremely large datasets; rendering large tables/charts may slow the UI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Known Assumptions
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Backend API Structure** – Assumes the backend follows expected REST endpoints and response formats.
+2. **Network Availability** – Assumes stable internet for API calls; offline mode not supported.
+3. **Environment Variables** – Correct configuration (e.g., `REACT_APP_API_URL`) is required.
+4. **Modern Browser Usage** – Assumes users access the app via modern browsers with ES6 support.
+5. **Data Consistency** – Relies on backend to maintain data integrity; frontend performs only UI-level validations.
